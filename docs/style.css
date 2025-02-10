@@ -2,28 +2,72 @@
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
     format("woff");
-  /* font-weight: 400; */
-  /* font-style: normal; */
 }
 
 @font-face {
   font-family: "PartialSansKR-Regular";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/PartialSansKR-Regular.woff2")
     format("woff2");
-  /* font-weight: normal;
-    font-style: normal; */
 }
 
 body {
-  font-family: "Pretendard-Regular";
+  font-family: "Pretendard-Regular", sans-serif;
+  background-color: #f8f9fa;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header {
+/* 네비게이션 바 */
+.navbar-brand {
   font-family: "PartialSansKR-Regular";
+  font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  margin-right: 15px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url("https://source.unsplash.com/1600x900/?food,restaurant")
+    no-repeat center center/cover;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 카드 스타일 */
+.card {
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* 버튼 스타일 */
+.btn-warning {
+  font-weight: bold;
+  border-radius: 5px;
+}
+.btn-warning:hover {
+  background-color: #ffcc00;
+  color: black;
 }
